@@ -13,10 +13,6 @@ module ProMotion
 
     def to_json(options = nil)
       mp self
-        to_hash.as_json(options)
-      else
-        instance_values.as_json(options)
-      end
     end
 
     def aps
