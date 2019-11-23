@@ -11,8 +11,12 @@ module ProMotion
       self.notification.inspect
     end
 
-    def to_json
-      self.as_json
+    def to_json(options = nil)
+      if respond_to?(:to_hash)
+        to_hash.as_json(options)
+      else
+        instance_values.as_json(options)
+      end
     end
 
     def aps
