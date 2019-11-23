@@ -22,7 +22,7 @@ class AppDelegate < PM::Delegate
 
   def on_load(app, options)
     register_for_push_notifications :badge, :sound, :alert, :newsstand
-    PM.logger.info registered_push_notifications
+    mp.info registered_push_notifications
     # ...
   end
 
@@ -31,11 +31,11 @@ class AppDelegate < PM::Delegate
   end
 
   def on_push_registration(token, error)
-    PM.logger.info token.description
+    mp.info token.description
   end
 
   def on_push_notification(notification, launched)
-    PM.logger.info notification.to_json
+    mp.info notification.to_json
   end
 end
 ```

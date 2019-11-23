@@ -12,7 +12,7 @@ module ProMotion
     end
 
     def to_json
-      ProMotion.logger.warn "ProMotion::PushNotification.to_json not implemented yet."
+      self.as_json
     end
 
     def aps
