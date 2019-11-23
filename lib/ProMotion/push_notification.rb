@@ -11,8 +11,8 @@ module ProMotion
       self.notification.inspect
     end
 
-    def to_json
-      self.as_json
+    def to_json(options = nil)
+      mp self
     end
 
     def aps
